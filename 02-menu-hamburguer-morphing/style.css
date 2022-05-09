@@ -34,3 +34,15 @@ body {
   align-items: center;
   position: relative;
 }
+
+.card-wrapper::before {
+  content: '';
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  display: block;
+  border: 1px solid white;
+  opacity: 0;
+  transition: 0.3s;
+}
+
