@@ -25,3 +25,12 @@ body {
   cursor: pointer;
   transition: 0.3s;
 }
+
+.card-wrapper {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
