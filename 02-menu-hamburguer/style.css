@@ -12,3 +12,21 @@
   justify-content: center;
   align-items: center;
 }
+
+.checkbox {
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.checkbox .trace {
+  width: 90px;
+  height: 8px;
+  background-color: white;
+  position: absolute;
+  border-radius: 4px;
+  transition: 0.5s ease-in-out;
+}
