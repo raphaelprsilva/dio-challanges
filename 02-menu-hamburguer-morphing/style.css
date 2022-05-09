@@ -72,3 +72,9 @@ body {
   width: 400px;
   opacity: 1;
 }
+
+.card:hover > .card-wrapper p {
+  opacity: 1;
+  visibility: visible;
+  font-size: 14px;
+}
