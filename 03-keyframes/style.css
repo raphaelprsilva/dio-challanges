@@ -1,4 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Open+Sans:ital,wght@0,400;0,700;1,300&family=Overpass:wght@400;600;700;800;900&display=swap');
 
+body {
+  margin: 0;
+  padding: 0;
+  color:aliceblue;
+  font-family: 'amatic sc', sans-serif;
+}
 
-
-
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(-45deg, #5e0878, #085078, #4ca59b, #1fa194);
+  background-size: 400% 400%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
