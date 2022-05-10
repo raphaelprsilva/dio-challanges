@@ -90,7 +90,7 @@ a:hover {
   background-color: #ffffff;
   position: absolute;
   border-radius: 4px;
-  transition: 0.5 ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 .checkbox .trace:nth-child(1) {
@@ -151,4 +151,23 @@ a:hover {
   text-transform: uppercase;
   letter-spacing: 4px;
   font-size: 40px;
+}
+
+#toggle:checked + .checkbox .trace:nth-child(1) {
+  transform: rotate(45deg);
+  background-color: #6a82fb;
+  top: 47px;
+}
+
+#toggle:checked + .checkbox .trace:nth-child(2) {
+  transform: translateX(-100px);
+  width: 30px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+#toggle:checked + .checkbox .trace:nth-child(3) {
+  transform: rotate(-45deg);
+  background-color: #6a82fb;
+  top: 48px;
 }
