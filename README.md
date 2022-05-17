@@ -1,4 +1,4 @@
-# dio-desafio-github
+# dio-challanges
 
 Neste repositório, estão contidas todas os conteúdos do bootcamp da tqi. 🚀
 
