@@ -24,3 +24,28 @@ const randomize = () => {
   cardData.sort(() => Math.random() - 0.5);
   return cardData;
 };
+
+const cardGenerator = () => {
+  const cardData = randomize();
+
+  cardData.forEach((item) => {
+    const card = document.createElement('div');
+    const face = document.createElement('img');
+    const back = document.createElement('div');
+
+    card.classList = 'card';
+    face.classList = 'card-face';
+    back.classList = 'card-back';
+
+    face.src = item.imgSrc;
+    face.alt = item.name;
+
+    section.appendChild(card);
+    card.appendChild(face);
+    card.appendChild(back);
+  })
+
+
+};
+
+cardGenerator();
