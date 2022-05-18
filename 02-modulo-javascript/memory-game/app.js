@@ -18,3 +18,9 @@ const getData = () => [
   { imgSrc: './images/walter-white-jr.webp', name: 'Walter White Jr' },
   { imgSrc: './images/walter-white.webp', name: 'Walter White' },
 ];
+
+const randomize = () => {
+  const cardData = getData();
+  cardData.sort(() => Math.random() - 0.5);
+  return cardData;
+};
