@@ -43,9 +43,7 @@ const cardGenerator = () => {
     section.appendChild(card);
     card.appendChild(face);
     card.appendChild(back);
-  })
-
-
+  });
 };
 
 cardGenerator();
