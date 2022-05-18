@@ -2,7 +2,7 @@ const section = document.querySelector('[data-js="section"]');
 const playerLivesCount = document.querySelector(
   '[data-js="player-lives-count"]',
 );
-const playerLives = 6;
+let playerLives = 6;
 
 playerLivesCount.textContent = playerLives;
 
@@ -48,7 +48,7 @@ const cardGenerator = () => {
     back.classList = 'card-back';
 
     face.src = item.imgSrc;
-    face.alt = item.name;
+    card.setAttribute('name', item.name);
 
     section.appendChild(card);
     card.appendChild(face);
@@ -56,8 +56,35 @@ const cardGenerator = () => {
 
     card.addEventListener('click', (e) => {
       card.classList.toggle('toggle-card');
+      checkCards(e);
     })
   });
 };
+
+const checkCards = (event) => {
+  const clickedCard = event.target;
+  clickedCard.classList.add('flipped');
+  const flippedCards = document.querySelectorAll('.flipped');
+  console.log(flippedCards);
+
+  if (flippedCards.length === 2) {
+    if (flippedCards[0].getAttribute('name') === flippedCards[1].getAttribute('name')) {
+      console.log('match');
+      flippedCards.forEach((card) => {
+        card.classList.remove('flipped');
+        card.style.pointerEvents = 'none';
+      })
+    } else {
+      console.log('wrong');
+      flippedCards.forEach((card) => {
+        card.classList.remove('flipped');
+        setTimeout(() => card.classList.remove('toggle-card'), 1500);
+      });
+      playerLives--;
+      playerLivesCount.textContent = playerLives;
+    }
+  }
+  console.log(clickedCard);
+}
 
 cardGenerator();
