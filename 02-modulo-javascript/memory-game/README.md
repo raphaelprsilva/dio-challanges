@@ -1,5 +1,9 @@
 # 📌 Breaking Bad - Memory Game
 
+Jogue aqui:
+
+👉 [https://breaking-bad.elraphael.com.br/](https://breaking-bad.elraphael.com.br/)
+
 Este repositório contém ativos do projeto 'Breaking Bad - Memory Game', feito com vanilla javascript.
 
 ![](./app-memory-game.gif)
